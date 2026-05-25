@@ -1,0 +1,8 @@
+{
+  "name": "Lemuel Jan Suico - Portfolio",
+  "description": "A sleek, professional, and minimal resume-style portfolio website with an AI-powered chatbot (Gemini/OpenAI).",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "entities": {
+    "Counter": {
+      "title": "Counter",
+      "description": "Global counters for the application",
+      "type": "object",
+      "properties": {
+        "likes": {
+          "type": "number",
+          "description": "Total number of likes"
+        }
+      },
+      "required": ["likes"]
+    }
+  },
+  "firestore": {
+    "counters/global": {
+      "schema": "Counter",
+      "description": "Stored global stats like total likes"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Default deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Helper functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isValidCounter(data) {
+      return data.likes is number && data.likes >= 0;
+    }
+
+    // Global counters
+    match /counters/global {
+      // Allow any user (even guest) to read the counter
+      allow get: if true;
+      
+      // Allow incrementing the likes counter. 
+      // We allow anonymous access here since it's a simple portfolio heart button.
+      allow update: if (
+        request.resource.data.diff(resource.data).affectedKeys().hasOnly(['likes']) &&
+        request.resource.data.likes == resource.data.likes + 1
+      );
+
+      // Allow creating the document if it doesn't exist (initialization)
+      allow create: if isValidCounter(request.resource.data);
+    }
+  }
+}
