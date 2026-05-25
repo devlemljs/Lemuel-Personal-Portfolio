@@ -191,12 +191,18 @@ const MainView: React.FC<MainViewProps> = ({ onSelectProject, onViewBlogs, onMod
             >
               View CV
             </button>
-            <button 
-              onClick={() => window.location.href='mailto:lemuelsuico.ljs@gmail.com'}
-              className={`px-8 py-2.5 border rounded-md font-bold text-xs transition-all transform hover:-translate-y-1.5 flex items-center justify-center ${isDarkMode ? 'bg-black text-white border-white hover:bg-white/10' : 'bg-white text-black border-black hover:bg-black/10'}`}
+            <a href="mailto:lemuelsuico.ljs@gmail.com"
+            onClick={(e) => {
+              e.preventDefault();
+              window.open(
+                'https://mail.google.com/mail/?view=cm&to=lemuelsuico.ljs@gmail.com',
+                '_blank'
+              );
+            }}
+            className={`px-8 py-2.5 border rounded-md font-bold text-xs transition-all transform hover:-translate-y-1.5 flex items-center justify-center ${isDarkMode ? 'bg-black text-white border-white hover:bg-white/10' : 'bg-white text-black border-black hover:bg-black/10'}`}
             >
               Email Me
-            </button>
+            </a>
             <button 
               onClick={onViewBlogs}
               className={`px-8 py-2.5 border rounded-md font-bold text-xs transition-all transform hover:-translate-y-1.5 flex items-center justify-center ${isDarkMode ? 'bg-purple-600 text-white border-purple-400 hover:bg-purple-500 shadow-[0_0_15px_rgba(168,85,247,0.4)]' : 'bg-purple-600 text-white border-purple-700 hover:bg-purple-700 shadow-[0_0_15px_rgba(147,51,234,0.3)]'}`}
