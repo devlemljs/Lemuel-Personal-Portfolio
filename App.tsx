@@ -5,6 +5,7 @@ import BlogView from './components/BlogView';
 import Footer from './components/Footer';
 import { Project } from './types';
 import { StarsBackground } from './components/ui/StarsBackground';
+import { Analytics } from "@vercel/analytics/react"
 
 const App: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
