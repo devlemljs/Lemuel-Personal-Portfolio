@@ -72,6 +72,16 @@ export const StarsBackground: React.FC<StarsBackgroundProps> = ({
       { rx: 10, ry: 85, size: 2.0, color: '#ffffff' },
     ];
 
+    const ursaMajorStars = [
+      { rx: 0, ry: 0, size: 2.2, color: '#ffffff' }, // Dubhe
+      { rx: 0, ry: 35, size: 2.0, color: '#ffffff' }, // Merak
+      { rx: -35, ry: 45, size: 2.0, color: '#ffffff' }, // Phecda
+      { rx: -45, ry: 10, size: 1.8, color: '#ffffff' }, // Megrez
+      { rx: -80, ry: 5, size: 1.8, color: '#ffffff' }, // Alioth
+      { rx: -110, ry: 20, size: 2.0, color: '#ffffff' }, // Mizar
+      { rx: -140, ry: 40, size: 1.8, color: '#ffffff' }, // Alkaid
+    ];
+
     const initStars = () => {
       const { width, height } = canvas.getBoundingClientRect();
       if (width === 0 || height === 0) return;
@@ -151,6 +161,15 @@ export const StarsBackground: React.FC<StarsBackgroundProps> = ({
         [[0, 2], [2, 5], [5, 1], [1, 3], [3, 5], [5, 0]]
       );
 
+      // Draw Ursa Major (Fixed Middle-Upper)
+      drawConstellation(
+        ursaMajorStars,
+        width * 0.58,
+        height * 0.08,
+        1.6,
+        [[0, 1], [1, 2], [2, 3], [3, 0], [3, 4], [4, 5], [5, 6]]
+      );
+
       // Draw Taurus
       drawConstellation(
         taurusStars,
@@ -158,15 +177,6 @@ export const StarsBackground: React.FC<StarsBackgroundProps> = ({
         height * constellationPositions.current.taurus.y,
         scale,
         [[1, 2], [2, 0], [1, 3], [0, 4], [3, 5]] // Hyades V and Horns
-      );
-
-      // Draw Auriga
-      drawConstellation(
-        aurigaStars,
-        width * constellationPositions.current.auriga.x,
-        height * constellationPositions.current.auriga.y,
-        scale,
-        [[0, 1], [1, 2], [2, 3], [3, 4], [4, 0]]
       );
 
       // Draw Caelum
