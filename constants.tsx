@@ -79,7 +79,7 @@ export const BLOGS: Blog[] = [
   },
   {
     id: 'finding-balance-travel',
-    title: 'Then He Flings It: Jin\'s Words That Changed How I Think',
+    title: '\"Then He Flings It\": Jin\'s Words That Changed How I Think',
     date: 'April 12, 2026',
     category: 'Personal',
     preview: 'How a single unbothered quote from BTS\'s Jin became my personal philosophy for dealing with uncertainty and overthinking.',
