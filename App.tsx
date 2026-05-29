@@ -45,16 +45,18 @@ const App: React.FC = () => {
     });
   };
 
+  const effectiveDarkMode = (selectedProject !== null || isViewingBlogs) ? true : isDarkMode;
+
   // Apply theme class to html element
   useEffect(() => {
-    if (isDarkMode) {
+    if (effectiveDarkMode) {
       document.documentElement.classList.add('dark');
       document.documentElement.classList.remove('light');
     } else {
       document.documentElement.classList.add('light');
       document.documentElement.classList.remove('dark');
     }
-  }, [isDarkMode]);
+  }, [effectiveDarkMode]);
 
   // Prevent background scrolling when a modal is open
   useEffect(() => {
@@ -81,9 +83,9 @@ const App: React.FC = () => {
   const toggleTheme = handleThemeToggle;
 
   return (
-    <div id="root-container" className={`min-h-screen relative flex flex-col ${isDarkMode ? 'text-white' : 'text-[#0a0a0a]'}`}>
+    <div className={`min-h-screen relative flex flex-col ${effectiveDarkMode ? 'text-white' : 'text-[#0a0a0a]'}`}>
       {/* Base Background Layer */}
-      <div className={`fixed inset-0 z-0 ${isDarkMode ? 'bg-[#0a0a0a]' : 'bg-white'}`} />
+      <div className={`fixed inset-0 z-0 ${effectiveDarkMode ? 'bg-[#0a0a0a]' : 'bg-white'}`} />
       
       {/* Stars Background - Global Viewport Coverage for Projects and Blogs */}
       {(selectedProject || isViewingBlogs) && (
@@ -91,7 +93,7 @@ const App: React.FC = () => {
       )}
 
       {/* Background Sheen Gradient */}
-      <div className={`fixed inset-0 pointer-events-none opacity-40 z-[3] ${isDarkMode ? 'block' : 'hidden'}`}>
+      <div className={`fixed inset-0 pointer-events-none opacity-40 z-[3] ${effectiveDarkMode ? 'block' : 'hidden'}`}>
         <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-purple-900/10 blur-[120px] rounded-full"></div>
         <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-purple-900/10 blur-[120px] rounded-full"></div>
       </div>
@@ -101,12 +103,12 @@ const App: React.FC = () => {
           <ProjectDetailView 
             project={selectedProject} 
             onBack={() => setSelectedProject(null)} 
-            isDarkMode={isDarkMode}
+            isDarkMode={effectiveDarkMode}
           />
         ) : isViewingBlogs ? (
           <BlogView 
             onBack={() => setIsViewingBlogs(false)} 
-            isDarkMode={isDarkMode}
+            isDarkMode={effectiveDarkMode}
           />
         ) : (
           <MainView 

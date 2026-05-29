@@ -8,7 +8,8 @@ interface ProjectDetailViewProps {
   isDarkMode: boolean;
 }
 
-// Minimalist Programming & Tech Icons
+const astro = 'images/astronaut_no_bg.png';
+
 const Icons = {
   React: () => (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -106,6 +107,11 @@ const ProjectDetailView: React.FC<ProjectDetailViewProps> = ({ project, onBack, 
 
   return (
     <div className="relative min-h-screen animate-in fade-in slide-in-from-bottom-4 duration-500 pb-20 overflow-hidden">
+      <img 
+        src= {astro}
+        alt="Astronaut floating in space" 
+        className="fixed top-0 right-2 md:top-10 md:right-4 w-32 md:w-64 opacity-80 animate-drift pointer-events-none drop-shadow-[0_0_25px_rgba(168,85,247,0.6)] z-0"
+      />
       <div className="relative z-10 p-6 md:p-10">
         <button 
           onClick={onBack}
