@@ -126,52 +126,66 @@ const ProjectDetailView: React.FC<ProjectDetailViewProps> = ({ project, onBack, 
 
           {/* Responsive Mosaic Gallery */}
           {project.id === 'internshipfy' ? (
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 mt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 mt-12">
               {project.images.slice(0, 3).map((img, idx) => (
                 <div 
                   key={idx} 
-                  className={`relative aspect-[9/16] rounded-2xl overflow-hidden border glossy-glow group/img ${
-                    isDarkMode ? 'border-white/10 bg-black/40' : 'border-black/10 bg-gray-100'
-                  } ${project.link ? 'cursor-pointer' : ''}`}
+                  className={`relative p-2 md:p-3 bg-[#0a0a0a] rounded-[2.5rem] md:rounded-[3rem] shadow-[0_0_0_1px_rgba(255,255,255,0.05),0_15px_35px_rgba(0,0,0,0.6)] border-[4px] border-[#1a1a1a] group/img ${project.link ? 'cursor-pointer' : ''}`}
                   onClick={() => project.link && window.open(project.link, '_blank')}
                 >
-                  <img src={img} className="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105" alt={`Phone Detail ${idx + 1}`} />
-                  {project.link && (
-                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center">
-                      <div className="bg-white/20 backdrop-blur-md px-4 py-2 rounded-full border border-white/30 text-white text-xs font-bold flex items-center gap-2">
-                        <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-                          <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-                        </svg>
-                        View Project
+                  <div className="absolute top-4 md:top-5 left-1/2 -translate-x-1/2 w-[30%] max-w-[120px] h-5 md:h-6 bg-black rounded-full z-20 pointer-events-none flex items-center justify-end px-2 sm:px-3 shadow-[0_1px_2px_rgba(255,255,255,0.05)] border border-[#111]">
+                    <div className="w-2.5 h-2.5 rounded-full bg-[#0a0a0a] border border-[#222] shadow-[inset_0_0_2px_rgba(0,0,0,1)]"></div>
+                  </div>
+                  <div className="relative aspect-[9/16] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden bg-black z-0 border border-[#111]">
+                    <img src={img} className="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-105" alt={`Phone Detail ${idx + 1}`} />
+                    {project.link && (
+                      <div className="absolute inset-0 bg-black/50 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                        <div className="bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 text-white text-xs font-bold flex items-center gap-2">
+                          <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                          </svg>
+                          View Project
+                        </div>
                       </div>
-                    </div>
-                  )}
+                    )}
+                  </div>
                 </div>
               ))}
             </div>
           ) : ['swingbase', 'portfolio-website', 'data-analysis'].includes(project.id) ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 md:gap-24 mt-16 px-2 sm:px-6">
               {project.images.slice(0, 4).map((img, idx) => (
                 <div 
                   key={idx} 
-                  className={`relative aspect-[16/10] rounded-xl overflow-hidden border glossy-glow group/img ${
-                    isDarkMode ? 'border-white/10 bg-black/40' : 'border-black/10 bg-gray-100'
-                  } ${project.link ? 'cursor-pointer' : ''}`}
+                  className={`relative flex flex-col items-center justify-start pt-8 z-10 group/img ${project.link ? 'cursor-pointer' : ''}`}
                   onClick={() => project.link && window.open(project.link, '_blank')}
                 >
-                  <img src={img} className="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105" alt={`Laptop Detail ${idx + 1}`} />
-                  {project.link && (
-                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center">
-                      <div className="bg-white/20 backdrop-blur-md px-4 py-2 rounded-full border border-white/30 text-white text-xs font-bold flex items-center gap-2">
-                        <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-                          <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-                        </svg>
-                        View Project
+                  <div className="relative w-full p-1.5 md:p-2 bg-[#000000] rounded-t-xl md:rounded-t-2xl shadow-[0_-5px_25px_rgba(0,0,0,0.6)] border-x-2 border-t-2 border-[#1a1a1a] flex flex-col z-0">
+                    <div className="relative aspect-[16/10] bg-black overflow-hidden rounded-md md:rounded-lg z-0 border border-[#111]">
+                      {/* MacBook Notch */}
+                      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[20%] max-w-[100px] h-3 md:h-4 bg-[#000000] rounded-b-md md:rounded-b-lg z-20 flex items-center justify-center pointer-events-none">
+                        <div className="w-1 h-1 md:w-1.5 md:h-1.5 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.15)_0%,rgba(0,0,0,1)_80%)] shadow-sm"></div>
                       </div>
+                      <img src={img} className="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-105" alt={`Laptop Detail ${idx + 1}`} />
+                      {project.link && (
+                        <div className="absolute inset-0 bg-black/50 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                          <div className="bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 text-white text-xs font-bold flex items-center gap-2">
+                            <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                            </svg>
+                            View Project
+                          </div>
+                        </div>
+                      )}
                     </div>
-                  )}
+                  </div>
+                  {/* Laptop Base */}
+                  <div className="relative w-[112%] md:w-[116%] h-2 md:h-3 bg-gradient-to-b from-[#1a1a1a] to-[#0a0a0a] rounded-b-lg md:rounded-b-xl shadow-[0_20px_35px_rgba(0,0,0,0.7)] flex justify-center z-10 border-t border-[#2a2a2a]">
+                    {/* Base indent / Thumb notch */}
+                    <div className="w-1/6 md:w-24 h-1 md:h-1.5 bg-[#000000] rounded-b-md shadow-[inset_0_1px_2px_rgba(0,0,0,1)]"></div>
+                  </div>
                 </div>
               ))}
             </div>
