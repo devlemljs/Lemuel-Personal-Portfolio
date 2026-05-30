@@ -35,4 +35,3 @@ Contact
 For inquiries or collaboration, feel free to reach out through the contact section on the website.
 
 
-# Lemuel's AI Chatbot Integration
