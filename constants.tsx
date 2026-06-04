@@ -41,7 +41,7 @@ const lem8 = 'gallery/lemuel8.webp';
 
 export const EXPERIENCES: Experience[] = [
   {
-    role: "Freelance/Student",
+    role: "Freelance/Developer",
     company: "Self-Employed",
     period: "January 2026-Present",
     responsibilities: [

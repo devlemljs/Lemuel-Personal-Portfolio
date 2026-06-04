@@ -254,7 +254,7 @@ const MainView: React.FC<MainViewProps> = ({ onSelectProject, onViewBlogs, onMod
                 <span className="text-purple-500 mt-1.5 block w-1.5 h-1.5 rounded-full bg-purple-500 shrink-0"></span>
                 Bachelor of Science in Entrepreneurship
               </h3>
-              <p className={`text-[12px] ml-3.5 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Rizal Technological University (2024-Present)</p>
+              <p className={`text-[12px] ml-3.5 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Rizal Technological University (2024-2026)</p>
             </div>
           </div>
 
