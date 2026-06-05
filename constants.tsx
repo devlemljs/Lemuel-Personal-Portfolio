@@ -95,18 +95,18 @@ export const BLOGS: Blog[] = [
   },
   {
     id: 'tech-entrepreneurship',
-    title: 'Bridging the Gap: Tech and Business as an Entrepreneurship Student',
+    title: 'Bridging the Gap: Tech and Business as an Entrepreneurship Learner',
     date: 'February 15, 2026',
     category: 'Professional',
-    preview: 'Exploring the intersection of technology and business through the lens of an entrepreneurship student.',
-    content: 'As an entrepreneurship student, I have realized that technology serves as the ultimate leverage in the modern business landscape. Understanding market trends is crucial, but being able to build the tools that execute those strategies is a total game-changer.\n\nMy academic background in entrepreneurship perfectly complements my technical skills in web development and data analysis. I believe the future belongs to those who can speak the languages of both the user and the machine. My goal is to use this unique perspective to build products that are commercially viable and user-centric.'
+    preview: 'Exploring the intersection of technology and business through the lens of an entrepreneurship enthusiast.',
+    content: 'As an entrepreneurship learner, I have realized that technology serves as the ultimate leverage in the modern business landscape. Understanding market trends is crucial, but being able to build the tools that execute those strategies is a total game-changer.\n\nMy academic background in entrepreneurship perfectly complements my technical skills in web development and data analysis. I believe the future belongs to those who can speak the languages of both the user and the machine. My goal is to use this unique perspective to build products that are commercially viable and user-centric.'
   },
   {
     id: 'utilizing-ai',
-    title: 'Leveraging AI: My Secret Weapon for Work and School',
+    title: 'Leveraging AI: My Secret Weapon for Work and Projects',
     date: 'January 10, 2026',
     category: 'Professional',
-    preview: 'How I integrate AI tools into my daily workflow to enhance productivity in both my professional and academic life.',
+    preview: 'How I integrate AI tools into my daily workflow to enhance productivity in both my professional and personal life.',
     content: 'AI has transitioned from a futuristic concept into a practical tool that I integrate into my daily routine. Whether I am brainstorming project ideas or debugging code, these technologies have significantly boosted my overall productivity.\n\nI view these advanced tools not as a replacement for human intelligence, but as a powerful amplifier. By automating repetitive tasks and providing instant information, AI allows me to focus on high-level strategic thinking. This approach ensures that I remain efficient while tackling complex creative problem-solving challenges in my work and school.'
   },
   {
@@ -181,7 +181,7 @@ export const PROJECTS: Project[] = [
     id: "swingbase",
     title: "SwingBase",
     shortDescription: "A social enterprise project focused on building community through web platforms.",
-    fullDescription: "SwingBase is a social enterprise school project focused on creating professional websites through collaborative student efforts. Visit swingbase.vercel.app to see the project in action and learn more about our social mission.",
+    fullDescription: "SwingBase is a social enterprise school project focused on creating professional websites through collaborative professional efforts. Visit swingbase.vercel.app to see the project in action and learn more about our social mission.",
     thumbnail: swing,
     images: [
     sb1, sb2, sb3, sb4,
