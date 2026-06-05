@@ -62,9 +62,17 @@ export const EXPERIENCES: Experience[] = [
 
 export const BLOGS: Blog[] = [
   {
+    id: 'yc-dream',
+    title: 'Y Combinator, You Are the Dream',
+    date: 'June 02, 2026',
+    category: 'Personal',
+    preview: 'What happens when you watch too much startup content and start daydreaming about a world you have no real plan to enter but cannot stop imagining.',
+    content: 'I have consumed enough startup content, founder interviews, and late night YouTube rabbit holes about YC to the point where it stopped feeling like research and started feeling like a parasocial relationship with a world I will probably never be part of. Somewhere between watching another "day in my life as a YC founder" video and reading through batch announcements of companies I now use every day, I started daydreaming about what it would feel like to just exist in that world. The energy, the obsession, the rooms full of people building things that did not exist yesterday.\n\nIt is just a daydream and I know that. I am not writing a business plan or drafting an application, I am just a person who watches too much startup content and occasionally stares at the ceiling imagining a life that feels cinematic and far away. There is something weirdly comforting about dreaming of a place like that even with no real plan to get there. Like a movie you love knowing you will never live it, but it still makes you feel something.'
+  },
+  {
     id: 'entrepreneurial-finance-studies',
     title: 'Diving Deep into Entrepreneurial Finance',
-    date: 'May 30, 2026',
+    date: 'May 19, 2026',
     category: 'Professional',
     preview: 'Exploring the complex world of the financial industry, investment strategies, and the economics of venture capital through the lens of equity.',
     content: 'My current studies have taken a deep dive into the fascinating world of Entrepreneurial Finance. This field is a powerful combination of financial industry insights, investment dynamics, and the intricacies of venture investing.\n\nI am exploring the specific mindset of a venture capitalist, delving into the underlying economics and the critical role of equity in long-term value creation. By mastering these concepts, I am equipping myself with a deep understanding of how capital flows within the industry, ensuring that projects are backed by solid financial foundations and strategic investment frameworks.'
@@ -72,7 +80,7 @@ export const BLOGS: Blog[] = [
   {
     id: 'staying-inspired-tech-business',
     title: 'How I Stay Inspired: Balancing Tech Passion and Business Studies',
-    date: 'May 5, 2026',
+    date: 'April 30, 2026',
     category: 'Professional',
     preview: 'Staying curious and inspired by merging entrepreneurship stories with experimental small-scale tech projects.',
     content: 'Maintaining a balance between my passion for technology and my business studies requires a constant stream of inspiration. I stay curious by actively watching and reading stories from successful entrepreneurs who have navigated similar paths.\n\nBrainstorming and experimenting with small projects allows me to apply what I learn in real-time, keeping the learning process exciting. By blending theoretical business concepts with practical technical implementation, I ensure that my skills remain sharp and relevant. This continuous cycle of discovery and creation is what fuels my drive to innovate and build meaningful digital solutions.'
@@ -80,7 +88,7 @@ export const BLOGS: Blog[] = [
   {
     id: 'finding-balance-travel',
     title: '\"Then He Flings It\": Jin\'s Words That Changed How I Think',
-    date: 'April 12, 2026',
+    date: 'April 08, 2026',
     category: 'Personal',
     preview: 'How a single unbothered quote from BTS\'s Jin became my personal philosophy for dealing with uncertainty and overthinking.',
     content: 'There\'s a moment from BTS\'s In the Soop where Jin watches someone handle a pajeon and casually says, "What if he flings it? Then he flings it." I stumbled across it on a late night scroll and laughed, then couldn\'t stop thinking about it. Seven words that somehow summed up everything I\'ve been struggling to practice: letting go of outcomes I was never in control of in the first place.\n\nI used to spend so much energy dreading the what ifs that I forgot to actually live the what is. Jin\'s words hit differently because they weren\'t advice, they were just him, completely unbothered, choosing peace over panic. And that\'s the version of myself I\'m working toward. Not careless, not reckless, just someone who does their best, releases the rest, and trusts that whatever gets flung, they\'ll handle it.'
