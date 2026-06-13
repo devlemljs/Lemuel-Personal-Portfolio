@@ -284,7 +284,7 @@ const MainView: React.FC<MainViewProps> = ({ onSelectProject, onViewBlogs, onMod
           <div>
             <SectionHeader title="Tools" icon={<Wrench className="w-4 h-4" />} />
             <div className="flex flex-wrap gap-2">
-              {["VSCode", "GitHub", "OpenAI", "Gemini", "Claude", "Firebase", "Supabase", "Discord", "n8n", "Teams", "MS Excel", "Power BI", "MS Word", "Canva", "Google Workspace", "Google Colab"].map((t, idx) => (
+              {["VSCode", "GitHub", "OpenAI", "Gemini", "Claude", "Firebase", "Supabase", "Zapier", "MS Teams", "MS Excel", "Power BI", "MS Word", "Canva", "Google Workspace", "Google Colab"].map((t, idx) => (
                 <Tag key={t} label={t} index={idx} />
               ))}
             </div>

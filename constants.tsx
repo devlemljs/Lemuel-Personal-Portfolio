@@ -19,10 +19,10 @@ const pw2 = 'images/pw2.png';
 const pw3 = 'images/pw3.png';
 const pw4 = 'images/pw4.png';
 
-const if1 = 'images/if1.jpg';
-const if2 = 'images/if2.jpg';
-const if3 = 'images/if3.jpg';
-const if4 = 'images/if4.jpg';
+const if1 = 'images/if1.png';
+const if2 = 'images/if2.png';
+const if3 = 'images/if3.png';
+const if4 = 'images/if4.png';
 
 const sb1 = 'images/sb1.png';
 const sb2 = 'images/sb2.png';
