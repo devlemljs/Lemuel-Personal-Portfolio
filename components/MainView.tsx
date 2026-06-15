@@ -157,7 +157,7 @@ const MainView: React.FC<MainViewProps> = ({ onSelectProject, onViewBlogs, onMod
           </div>
           
           <p className={`font-medium text-sm md:text-lg mb-4 ${isDarkMode ? 'text-white' : 'text-gray-700'}`}>
-            Technopreneur | Web Developer | Data Enthusiast
+            Buisness Intelligence | Web Development | AI Specialist
           </p>
           
           {/* Contact info line with Icons */}
@@ -284,7 +284,7 @@ const MainView: React.FC<MainViewProps> = ({ onSelectProject, onViewBlogs, onMod
           <div>
             <SectionHeader title="Tools" icon={<Wrench className="w-4 h-4" />} />
             <div className="flex flex-wrap gap-2">
-              {["VSCode", "GitHub", "OpenAI", "Gemini", "Claude", "Firebase", "Supabase", "Zapier", "MS Teams", "MS Excel", "Power BI", "MS Word", "Canva", "Google Workspace", "Google Colab"].map((t, idx) => (
+              {["VSCode", "GitHub", "OpenAI", "Gemini", "Claude", "Firebase", "Make.com", "Zapier", "MS Teams", "MS Excel", "Power BI", "MS Word", "Canva", "Google Workspace", "Google Colab"].map((t, idx) => (
                 <Tag key={t} label={t} index={idx} />
               ))}
             </div>
